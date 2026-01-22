@@ -1,13 +1,13 @@
 # week1-kotlinperusteet
 
-# Datamalli
-Sovellus käyttää Task data classia tehtävien kuvaamiseen. Tehtävällä on id, prioriteetti, kuvaus, määräpäivä ja tieto onko tehtävä tehty. Tehtävän prioriteetti määritellään prioriry enumilla jotka ovat LOW, MEDIUM, HIGH. Mocktasks on esimerkkilista jota käytetään sovelluksen testaamiseen.
+# Compose-tilanhallinta
+Jetpack Compose käyttää deklaratiivista käyttöliittymämallia, jossa UI kuvataan tilan funktiona. 
+Kun tila muuttuu, Compose piirtää automaattisesti vain ne käyttöliittymän osat uudelleen, jotka riippuvat muuttuneesta tilasta.
+Compose seuraa tilaa State<T>-olioiden avulla. Kun Composable lukee tilaa, Compose rekisteröi riippuvuuden kyseisen tilan ja Composablen välille. Kun tila päivittyy, Compose käynnistää recomposition eli käyttöliittymän uudelleenlaskennan.
 
-# funktiot
-addTask lisää uuden tehtävän
-filterbydone suodattaa tehtävä tehtyihin ja tekemättömiin
-sortbyduedate järjestää tehtävät määräpäivän mukaan
-toggledone vaihtaa tehtävän done tilan
+# Miksi ViewModel on parempi kuin pelkkä remember.
+ViewModel on parempi kuin pelkkä remember, koska se säilyttää tilan oikein elinkaarimuutoksissa ja erottaa tilalogiikan käyttöliittymästä.
+Kun näyttöä kiertää konfiguraatio pysyy ennallaan ja säilyttää rotaation. Tällöin sovellusta ei ole sidottu UI:n uudelleenpiirtämiseen.
 
 # miten ajetaan
 Avaa projekti android studiossa,
